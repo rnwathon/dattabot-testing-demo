@@ -5,7 +5,9 @@ const TodoList = ({ children, ...props }) => {
     <ul 
       className="flex flex-col gap-2 rounded-lg border border-slate-300 shadow-md h-96 p-3"
       {...props}>
-        {children.length === 0 ? <span className="text-center text-gray-500">No Task</span> : children}
+        {children.length === 0 
+          ? <span className="text-center text-gray-500">No Task</span> 
+          : children}
     </ul>
   )
 }

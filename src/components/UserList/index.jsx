@@ -6,7 +6,7 @@ const UserList = ({ children, isLoading, ...props }) => {
       className="flex flex-col gap-2 rounded-lg border border-slate-300 shadow-md h-96 p-3 overflow-y-scroll"
       {...props}
     >
-        {isLoading ? "Loading..." : children}
+        {isLoading ? <span>Loading...</span>: children}
     </ul>
   )
 }
