@@ -4,6 +4,7 @@ const TodoList = ({ children, ...props }) => {
   return (
     <ul 
       className="flex flex-col gap-2 rounded-lg border border-slate-300 shadow-md h-96 p-3"
+      data-testid="todo-list"
       {...props}>
         {children.length === 0 
           ? <span className="text-center text-gray-500">No Task</span> 
@@ -23,6 +24,7 @@ const TodoListItem = ({ children, ...props }) => {
     <li 
       className={`cursor-pointer ${isDone && "line-through text-gray-400"}`} 
       onClick={handleClick}
+      data-testid="todo-list-item"
       {...props}
     > 
       { children } 

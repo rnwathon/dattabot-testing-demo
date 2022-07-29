@@ -27,7 +27,7 @@ function Users() {
       <main className='w-96 mx-auto py-5'>
         <UserList isLoading={isLoading}>
           {userList.map((user, index) => (
-            <UserList.Item key={index} data={user} />
+            <UserList.Item key={index} data={user} data-testid="user-item"/>
           ))}
         </UserList>
       </main>
